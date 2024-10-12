@@ -1,0 +1,160 @@
+<%- include('./layouts/header') %>
+
+<%- include('./layouts/sidebar') %>
+
+ <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+
+    <div class="content-page">
+        <div class="content">
+
+            <!-- Start Content-->
+            <div class="container-fluid">
+
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">                            
+                    <div class="text-end pt-2 ">
+                        <a data-bs-toggle="modal" data-bs-target="#custom-modal"
+                         class="btn btn-primary waves-effect waves-light" data-animation="fadein"
+                         data-plugin="custommodal" data-overlaySpeed="200" data-overlayColor="#36404a">
+                        <i class="mdi mdi-plus"></i> 
+                        Add Article
+                        </a>
+                       </div>
+
+                    </div><!-- end col -->
+
+                </div><!-- end row -->
+                <br>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12">
+                        <div class="card">
+                            <div class="card-body taskboard-box">
+                                <!-- <h4 class="header-title mt-0 mb-3 text-primary">Upcoming</h4> -->
+                                <table id="datatable" class="table table-bordered dt-responsive table-responsive nowrap">
+                                    <thead>
+                                    <tr>
+                                        <th width="25%">Article Title</th>
+                                        <th width="25%">Description</th>
+                                        <th width="15%">Date</th>
+                                        <th width="15%">Action</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                        <% aritcleData.forEach(aritcle => { %>
+                                    <tr>
+                                        <td><%= aritcle.title %></td>
+                                        <td><%= aritcle.description %></td>
+                                        <td><%= aritcle.createdAt.toDateString() %></td>
+                                        <td>
+                                           <a href="#" data-bs-toggle="modal" data-bs-target="#edit-modal"> <button class="btn btn-success">Edit</button></a>
+                                            <button class="btn btn-danger">Delete</button>
+                                        </td>
+                                    </tr>
+                                    <% }) %>
+                                    </tbody>
+                                </table>    
+                                <% if (nextPage !== null) { %>
+                                    <a href="/?page=<%= nextPage %>" class="pagination">&lt; view more</a>
+                                    <% } %>              
+                            </div>
+                        </div>
+
+                    </div><!-- end col -->
+
+                </div><!-- end row -->
+
+            </div> <!-- container -->
+
+        </div> <!-- content -->
+
+        <!-- Footer Start -->
+        <footer class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <script>document.write(new Date().getFullYear())</script> &copy; </a> 
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- end Footer -->
+
+    </div>
+
+<!-- ============================================================== -->
+<!-- End Page content -->
+<!-- ============================================================== -->
+<!-- Modal -->
+<div class="modal fade" id="custom-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myCenterModalLabel">Add New Artical</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/add-article" method="POST" role="form">
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Article Name</label>
+                        <input type="text" name="title" class="form-control" id="name" placeholder="Type category name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Article Description</label>
+                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" placeholder="Type article description" rows="3"></textarea>
+                    </div>
+                    <!-- <div class="mb-3">
+                        <label class="form-label" for="name">Article image</label>
+                        <input type="file" name="name" class="form-control" id="name" placeholder="Type category name">
+                    </div> -->
+                    <!-- <div class="mb-3">
+                        <label class="form-label" for="name">Upload Thumbnail</label>
+                        <input type="file" name="thumbnail" class="form-control" id="thumbnail">
+                    </div> -->
+                    <button type="submit" value="Add" class="btn btn-success waves-effect waves-light me-1">Save</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light"
+                        data-bs-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<!--Edit Modal -->
+<div class="modal fade" id="edit-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myCenterModalLabel">Edit Artical</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+            </div>
+            <div class="modal-body">
+                <form action="/add-article" method="POST" role="form">
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Article Name</label>
+                        <input type="text" name="title" class="form-control" id="name" placeholder="Type category name">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Article Description</label>
+                    <textarea class="form-control" name="description" id="exampleFormControlTextarea1" placeholder="Type article description" rows="3"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="name">Upload Thumbnail</label>
+                        <input type="file" name="thumbnail" class="form-control" id="thumbnail">
+                    </div>
+                    <button type="submit" value="Add" class="btn btn-success waves-effect waves-light me-1">Save</button>
+                    <button type="button" class="btn btn-danger waves-effect waves-light"
+                        data-bs-dismiss="modal">Cancel</button>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+
+<%- include('./layouts/footer') %>
+
+
