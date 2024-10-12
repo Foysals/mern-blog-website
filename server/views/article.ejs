@@ -49,7 +49,10 @@
                                         <td><%= aritcle.createdAt.toDateString() %></td>
                                         <td>
                                            <a href="#" data-bs-toggle="modal" data-bs-target="#edit-modal"> <button class="btn btn-success">Edit</button></a>
-                                            <button class="btn btn-danger">Delete</button>
+                                           <br>
+                                            <form action="/delete-article/<%= aritcle._id %>?_method=DELETE" method="POST">
+                                               <button type="submit" value="Delete" class="btn btn-danger">Delete</button>
+                                              </form>
                                         </td>
                                     </tr>
                                     <% }) %>

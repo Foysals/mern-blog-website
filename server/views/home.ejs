@@ -13,91 +13,69 @@
             <div class="container-fluid py-5">
 
                 <div class="row">
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-6">
                         <div class="card">
-                            <div class="card-body taskboard-box">
-                                <!-- <h4 class="header-title mt-0 mb-3 text-primary">Upcoming</h4> -->
-
-                                <ul class="sortable-list list-unstyled taskList" id="upcoming">
-                                    <li>
-                                        <div class="kanban-box">
-                                            <div class="kanban-detail">
-                                                <span class="badge bg-success float-end p-2">5</span>
-                                                <h5 class="mt-0">
-                                                    <a href="#" class="text-dark">
-                                                        Total Category
-                                                    </a> 
-                                                </h5>
-                                               
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-
-                                <!-- <div class="text-center pt-2">
-                                    <a data-bs-toggle="modal" data-bs-target="#custom-modal"
-                                        class="btn btn-primary waves-effect waves-light" data-animation="fadein"
-                                        data-plugin="custommodal" data-overlaySpeed="200" data-overlayColor="#36404a">
-                                        <i class="mdi mdi-plus"></i> Add New
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical"></i>
                                     </a>
-                                </div> -->
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Something else</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
+                                    </div>
+                                </div>
+
+                                <h4 class="header-title mt-0 mb-3">Views Analysis</h4>
+
+                                <div id="" style="height: 320px; padding: 0px; position: relative;"><canvas class="" width="341" height="287" style="height: 320px;"></canvas><div class="flot-text" style="position: absolute; inset: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; inset: 0px;"><div style="position: absolute; max-width: 52px; top: 305px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 28px; text-align: center;">0</div><div style="position: absolute; max-width: 52px; top: 305px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 94px; text-align: center;">2</div><div style="position: absolute; max-width: 52px; top: 305px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 160px; text-align: center;">4</div><div style="position: absolute; max-width: 52px; top: 305px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 226px; text-align: center;">6</div><div style="position: absolute; max-width: 52px; top: 305px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 292px; text-align: center;">8</div><div style="position: absolute; max-width: 52px; top: 305px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 355px; text-align: center;">10</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; inset: 0px;"><div style="position: absolute; top: 0px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 1px; text-align: right;">30</div><div style="position: absolute; top: 293px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 8px; text-align: right;">0</div><div style="position: absolute; top: 244px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 8px; text-align: right;">5</div><div style="position: absolute; top: 195px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 1px; text-align: right;">10</div><div style="position: absolute; top: 147px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 1px; text-align: right;">15</div><div style="position: absolute; top: 98px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 1px; text-align: right;">20</div><div style="position: absolute; top: 49px; font: 400 12px / 14px Roboto, sans-serif; color: rgb(152, 166, 173); left: 1px; text-align: right;">25</div></div></div><canvas class="" width="341" height="287" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 380px; height: 320px;"></canvas><div class="legend"><div style="position: absolute; width: 42px; height: 30px; top: -17px; right: 7px; background-color: transparent; opacity: 0.85;"> </div><table style="position:absolute;top:-17px;right:7px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(24,138,226);overflow:hidden"></div></div></td><td class="legendLabel">Series One&nbsp;&nbsp;</td><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(16,196,105);overflow:hidden"></div></div></td><td class="legendLabel">Series Two&nbsp;&nbsp;</td><td class="legendColorBox"><div style="border:1px solid null;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(235,239,242);overflow:hidden"></div></div></td><td class="legendLabel">Series Three&nbsp;&nbsp;</td></tr></tbody></table></div></div>
                             </div>
                         </div>
+                       
+                    </div>
 
-                    </div><!-- end col -->
 
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-6">
                         <div class="card">
-                            <div class="card-body taskboard-box">
-                                <!-- <h4 class="header-title mt-0 mb-3 text-primary">Upcoming</h4> -->
+                            <div class="card-body">
+                                <div class="dropdown float-end">
+                                    <a href="#" class="dropdown-toggle arrow-none card-drop" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="mdi mdi-dots-vertical"></i>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-end">
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Action</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Another action</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Something else</a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item">Separated link</a>
+                                    </div>
+                                </div>
 
-                                <ul class="sortable-list list-unstyled taskList" id="upcoming">
-                                    <li>
-                                        <div class="kanban-box">
-                                            <div class="kanban-detail">
-                                                <span class="badge bg-success float-end p-2">3</span>
-                                                <h5 class="mt-0">
-                                                    <a href="#" class="text-dark">
-                                                        Total Sub Category
-                                                    </a> 
-                                                </h5>
-                                               
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
+                                <h4 class="header-title mt-0 mb-3">Audience</h4>
+
+                                <div id="pie-chart">
+                                    <div id="pie-chart-container" class="flot-chart" style="height: 260px; padding: 0px; position: relative;">
+                                    <canvas class="flot-base" width="341" height="233" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 380px; height: 260px;"></canvas><canvas class="flot-overlay" width="341" height="233" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 380px; height: 260px;"></canvas><div class="legend"><div style="position: absolute; width: 14px; height: 90px; top: 5px; right: 5px; background-color: transparent; opacity: 0.85;"> </div><table style="position:absolute;top:5px;right:5px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(255,138,204);overflow:hidden"></div></div></td><td class="legendLabel">Series 1</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(91,105,188);overflow:hidden"></div></div></td><td class="legendLabel">Series 2</td></tr><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(249,200,81);overflow:hidden"></div></div></td><td class="legendLabel">Series 3</td></tr></tbody></table></div></div>
+                                </div>
+
                             </div>
                         </div>
+                       
+                    </div>
 
-                    </div><!-- end col -->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="card">
-                            <div class="card-body taskboard-box">
-                                <!-- <h4 class="header-title mt-0 mb-3 text-primary">Upcoming</h4> -->
-
-                                <ul class="sortable-list list-unstyled taskList" id="upcoming">
-                                    <li>
-                                        <div class="kanban-box">
-                                            <div class="kanban-detail">
-                                                <span class="badge bg-success float-end p-2">23</span>
-                                                <h5 class="mt-0">
-                                                    <a href="#" class="text-dark">
-                                                        Total Order
-                                                    </a> 
-                                                </h5>
-                                               
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div><!-- end col -->
 
                 </div><!-- end row -->
                 <div class="row">
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-6 col-md-4">
                         <div class="card">
                             <div class="card-body taskboard-box">
                                 <!-- <h4 class="header-title mt-0 mb-3 text-primary">Upcoming</h4> -->
@@ -106,10 +84,19 @@
                                     <li>
                                         <div class="kanban-box">
                                             <div class="kanban-detail">
+                                             
+                                                <h3 class="mt-0">
+                                                    <a href="#" class="text-dark">
+                                                        Search Keywords
+                                                    </a> 
+                                                </h3>
+                                               
+                                            </div>
+                                            <div class="kanban-detail mt-1">
                                                 <span class="badge bg-success float-end p-2">35</span>
                                                 <h5 class="mt-0">
                                                     <a href="#" class="text-dark">
-                                                        Total Product
+                                                        Page views
                                                     </a> 
                                                 </h5>
                                                
@@ -122,7 +109,7 @@
 
                     </div><!-- end col -->
 
-                    <div class="col-lg-4 col-md-4">
+                    <div class="col-lg-6 col-md-4">
                         <div class="card">
                             <div class="card-body taskboard-box">
                                 <!-- <h4 class="header-title mt-0 mb-3 text-primary">Upcoming</h4> -->
@@ -131,13 +118,16 @@
                                     <li>
                                         <div class="kanban-box">
                                             <div class="kanban-detail">
-                                                <span class="badge bg-success float-end p-2">6</span>
-                                                <h5 class="mt-0">
-                                                    <a href="#" class="text-dark">
-                                                        Total Brand
-                                                    </a> 
-                                                </h5>
-                                               
+                                                <h3 class="mt-0">
+                                                Top Referrering URLs
+                                                </h3>
+                                               <a href="https://www.google.com/" class="text-green-500">
+                                                https://www.google.com/
+                                               </a>
+                                               <br>
+                                               <a href="https://www.techyarea.com/" class="text-yellow-600">
+                                                https://www.techyarea.com/
+                                               </a>
                                             </div>
                                         </div>
                                     </li>
@@ -146,33 +136,6 @@
                         </div>
 
                     </div><!-- end col -->
-                    
-                    <!--2nd Line-->
-                    <div class="col-lg-4 col-md-4">
-                        <div class="card">
-                            <div class="card-body taskboard-box">
-                                <!-- <h4 class="header-title mt-0 mb-3 text-primary">Upcoming</h4> -->
-
-                                <ul class="sortable-list list-unstyled taskList" id="upcoming">
-                                    <li>
-                                        <div class="kanban-box">
-                                            <div class="kanban-detail">
-                                                <span class="badge bg-success float-end p-2">15</span>
-                                                <h5 class="mt-0">
-                                                    <a href="#" class="text-dark">
-                                                        Total Success Order
-                                                    </a> 
-                                                </h5>
-                                               
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div><!-- end col -->
-
                 </div><!-- end row -->
 
             </div> <!-- container -->

@@ -27,7 +27,8 @@ router.get('/register',(req,res)=>{
     const token = req.cookies.token;
   
     if(!token) {
-      return res.status(401).json( { message: 'Unauthorized'} );
+      //return res.status(401).json( { message: 'Unauthorized'} );
+      return res.sendFile(path.join(__dirname,'../', 'public', '404.html'));
       // res.redirect('/');
     }
   
@@ -151,6 +152,20 @@ router.get('/edit-article/:id', async (req, res) => {
   
   });
 
+  /**
+ * DELETE /
+ * Delete Post
+*/
+router.delete('/delete-article/:id', authMiddleware, async (req, res) => {
+
+  try {
+    await Aritcle.deleteOne( { _id: req.params.id } );
+    res.redirect('/article');
+  } catch (error) {
+    console.log(error);
+  }
+
+});
   /**
  * POST /
  * Admin - Check Login
